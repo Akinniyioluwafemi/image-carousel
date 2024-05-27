@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img width="200" height="200" id="image" src="" alt="">
+    <button onclick="moveBackward()">previous</button>
+    <button onclick="moveForward()">next</button>
+</body>
+</html>
+
+<script>
+    let image = document.getElementById('image')
+
+    let imageArr =['https://buffer.com/library/content/images/2023/10/free-images.jpg',
+     'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg', 
+     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWYhxudhOsH0ztsmMnF8gSurKeZJYPwatbHmHk0nyimQ&s']
+
+    let count = 0
+    image.scr = imageArr[count]
+
+    function moveForward(){
+        if (count==(imageArr.length -1)){
+            count= 0
+            img.scr = imageArr[count]
+        }else{
+            count++
+            image.src = imageArr[count]
+        }
+
+    }
+
+    function moveBackward(){
+        if (count==0){
+            count = imageArr.length -1
+            image.scr = imageArr[count]
+        }else{
+            count--
+            image.scr = imageArr[count]
+        }
+    }
+
+
+
+</script>
